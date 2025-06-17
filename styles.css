@@ -102,6 +102,7 @@ h1, h2, h3 {
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
+    position: relative;
 }
 
 .hero-title {
@@ -140,62 +141,47 @@ h1, h2, h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.ganesha-circle {
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(135deg, #FFD700, #FF6B35);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
-    animation: gentle-float 3s ease-in-out infinite;
+    height: 400px;
 }
 
+/* Floating Emoticons */
 .floating-emojis {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    pointer-events: none;
 }
 
 .emoji {
     position: absolute;
-    font-size: 2.5rem;
+    font-size: 4rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    z-index: 10;
 }
 
 .emoji.elephant {
-    top: 20%;
-    left: 30%;
+    top: 10%;
+    left: 15%;
     animation: bounce-elephant 2.5s ease-in-out infinite;
 }
 
 .emoji.om {
-    top: 30%;
-    right: 25%;
+    top: 15%;
+    right: 10%;
     animation: bounce-om 3s ease-in-out infinite;
 }
 
 .emoji.diya {
-    bottom: 30%;
-    left: 25%;
+    bottom: 25%;
+    left: 10%;
     animation: bounce-diya 2.2s ease-in-out infinite;
 }
 
 .emoji.flower {
-    bottom: 20%;
-    right: 30%;
+    bottom: 15%;
+    right: 20%;
     animation: bounce-flower 2.8s ease-in-out infinite;
-}
-
-@keyframes gentle-float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
 }
 
 @keyframes bounce-elephant {
@@ -203,7 +189,7 @@ h1, h2, h3 {
         transform: translateY(0px) scale(1);
     }
     50% { 
-        transform: translateY(-20px) scale(1.15);
+        transform: translateY(-25px) scale(1.15);
     }
 }
 
@@ -212,7 +198,7 @@ h1, h2, h3 {
         transform: translateY(0px) scale(1) rotate(0deg);
     }
     50% { 
-        transform: translateY(-25px) scale(1.2) rotate(5deg);
+        transform: translateY(-30px) scale(1.2) rotate(5deg);
     }
 }
 
@@ -221,7 +207,7 @@ h1, h2, h3 {
         transform: translateY(0px) scale(1);
     }
     50% { 
-        transform: translateY(-18px) scale(1.1);
+        transform: translateY(-22px) scale(1.1);
     }
 }
 
@@ -230,7 +216,7 @@ h1, h2, h3 {
         transform: translateY(0px) scale(1) rotate(0deg);
     }
     50% { 
-        transform: translateY(-22px) scale(1.18) rotate(-3deg);
+        transform: translateY(-28px) scale(1.18) rotate(-3deg);
     }
 }
 
@@ -551,6 +537,14 @@ h1, h2, h3 {
         font-size: 2.5rem;
     }
     
+    .hero-illustration {
+        height: 300px;
+    }
+    
+    .emoji {
+        font-size: 3rem;
+    }
+    
     .gallery-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -589,12 +583,9 @@ h1, h2, h3 {
         font-size: 2.5rem;
     }
 
-    .ganesha-circle {
-        width: 250px;
-        height: 250px;
-    }
-
-    .emoji {
+    .gallery-icon {
+        width: 80px;
+        height: 80px;
         font-size: 2rem;
     }
 }
@@ -616,19 +607,12 @@ h1, h2, h3 {
         padding: 3rem 0;
     }
     
-    .ganesha-circle {
-        width: 200px;
-        height: 200px;
+    .hero-illustration {
+        height: 250px;
     }
     
-    .gallery-icon {
-        width: 80px;
-        height: 80px;
-        font-size: 2rem;
-    }
-
     .emoji {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 }
 
