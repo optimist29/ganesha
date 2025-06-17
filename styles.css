@@ -150,17 +150,68 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    color: white;
-    font-weight: 700;
-    text-align: center;
+    position: relative;
     box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
     animation: gentle-float 3s ease-in-out infinite;
+}
+
+.floating-emojis {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emoji {
+    position: absolute;
+    font-size: 2.5rem;
+    animation: bounce-jump 2s ease-in-out infinite;
+}
+
+.emoji.elephant {
+    top: 20%;
+    left: 30%;
+    animation-delay: 0s;
+}
+
+.emoji.om {
+    top: 30%;
+    right: 25%;
+    animation-delay: 0.5s;
+}
+
+.emoji.diya {
+    bottom: 30%;
+    left: 25%;
+    animation-delay: 1s;
+}
+
+.emoji.flower {
+    bottom: 20%;
+    right: 30%;
+    animation-delay: 1.5s;
 }
 
 @keyframes gentle-float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
+}
+
+@keyframes bounce-jump {
+    0%, 100% { 
+        transform: translateY(0px) scale(1);
+    }
+    25% { 
+        transform: translateY(-15px) scale(1.1);
+    }
+    50% { 
+        transform: translateY(-25px) scale(1.2);
+    }
+    75% { 
+        transform: translateY(-15px) scale(1.1);
+    }
 }
 
 /* Gallery Section */
@@ -517,6 +568,15 @@ h1, h2, h3 {
     .ganesha-name {
         font-size: 2.5rem;
     }
+
+    .ganesha-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .emoji {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -539,13 +599,16 @@ h1, h2, h3 {
     .ganesha-circle {
         width: 200px;
         height: 200px;
-        font-size: 1rem;
     }
     
     .gallery-icon {
         width: 80px;
         height: 80px;
         font-size: 2rem;
+    }
+
+    .emoji {
+        font-size: 1.5rem;
     }
 }
 
