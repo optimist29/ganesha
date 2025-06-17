@@ -167,31 +167,30 @@ h1, h2, h3 {
 .emoji {
     position: absolute;
     font-size: 2.5rem;
-    animation: bounce-jump 2s ease-in-out infinite;
 }
 
 .emoji.elephant {
     top: 20%;
     left: 30%;
-    animation-delay: 0s;
+    animation: bounce-elephant 2.5s ease-in-out infinite;
 }
 
 .emoji.om {
     top: 30%;
     right: 25%;
-    animation-delay: 0.5s;
+    animation: bounce-om 3s ease-in-out infinite;
 }
 
 .emoji.diya {
     bottom: 30%;
     left: 25%;
-    animation-delay: 1s;
+    animation: bounce-diya 2.2s ease-in-out infinite;
 }
 
 .emoji.flower {
     bottom: 20%;
     right: 30%;
-    animation-delay: 1.5s;
+    animation: bounce-flower 2.8s ease-in-out infinite;
 }
 
 @keyframes gentle-float {
@@ -199,18 +198,39 @@ h1, h2, h3 {
     50% { transform: translateY(-10px); }
 }
 
-@keyframes bounce-jump {
+@keyframes bounce-elephant {
     0%, 100% { 
         transform: translateY(0px) scale(1);
     }
-    25% { 
-        transform: translateY(-15px) scale(1.1);
+    50% { 
+        transform: translateY(-20px) scale(1.15);
+    }
+}
+
+@keyframes bounce-om {
+    0%, 100% { 
+        transform: translateY(0px) scale(1) rotate(0deg);
     }
     50% { 
-        transform: translateY(-25px) scale(1.2);
+        transform: translateY(-25px) scale(1.2) rotate(5deg);
     }
-    75% { 
-        transform: translateY(-15px) scale(1.1);
+}
+
+@keyframes bounce-diya {
+    0%, 100% { 
+        transform: translateY(0px) scale(1);
+    }
+    50% { 
+        transform: translateY(-18px) scale(1.1);
+    }
+}
+
+@keyframes bounce-flower {
+    0%, 100% { 
+        transform: translateY(0px) scale(1) rotate(0deg);
+    }
+    50% { 
+        transform: translateY(-22px) scale(1.18) rotate(-3deg);
     }
 }
 
