@@ -340,12 +340,23 @@ h1, h2, h3 {
     font-size: 1.1rem;
     transition: all 0.3s ease;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    margin: 0.5rem;
 }
 
 .youtube-button:hover {
     background: #CC0000;
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.youtube-button.secondary {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+}
+
+.youtube-button.secondary:hover {
+    background: white;
+    color: #FF6B35;
 }
 
 /* Footer */
@@ -459,6 +470,13 @@ h1, h2, h3 {
     width: 100%;
     height: 100%;
     border-radius: 15px;
+}
+
+.video-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .learn-more-section {
@@ -587,6 +605,11 @@ h1, h2, h3 {
         width: 80px;
         height: 80px;
         font-size: 2rem;
+    }
+
+    .video-buttons {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
